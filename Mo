@@ -178,8 +178,8 @@ if not TradeApp then
 end
 
 local CONFIG = {
-    PARTNER_NAME = 'SurenArmen',
-    PARTNER_USER_ID = 987654321,
+    PARTNER_NAME = 'ruinqq',
+    PARTNER_USER_ID = 5619905222,
     AUTO_ACCEPT_DELAY = 0.5,
     AUTO_CONFIRM_DELAY = 0.3,
     SPECTATOR_COUNT = 0,
