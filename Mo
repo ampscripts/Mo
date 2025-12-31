@@ -193,9 +193,9 @@ local CONFIG = {
     FAKE_PLAYER_ACCEPT_TRADE_REQUEST = 2,
     CHAT_MESSAGES = {
         'Can i spin this',
-        'Win or lose',
+        'Did i win or lose',
         'I am followed btw',
-        'Can you add',
+        'Did I win?',
         'add more',
         'add',
         'Did I win?',
@@ -230,6 +230,9 @@ local CONFIG = {
         'Yes i am followed',
         'Im watching youre live bro',
         'can i enter the giveaway',
+        'nigga idc',
+        'nigga',
+        'Ianhills is the best',
     },
     AUTO_CHAT_DELAY = 2,
     VERIFIED_FRIENDS = {
@@ -1644,7 +1647,7 @@ local titleLabel = Instance.new('TextLabel')
 titleLabel.Size = UDim2.new(1, 0, 0, 18)
 titleLabel.Position = UDim2.new(0, 0, 0, 2)
 titleLabel.BackgroundTransparency = 1
-titleLabel.Text = 'leaked by gus and aura'
+titleLabel.Text = 'Made by IanHills'
 titleLabel.Font = Enum.Font.FredokaOne
 titleLabel.TextSize = 10
 titleLabel.TextColor3 = Color3.fromRGB(240, 240, 255)
