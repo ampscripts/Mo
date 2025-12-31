@@ -791,42 +791,14 @@ local function getPropertiesString(properties)
     return ''
 end
 
-
-
--- function to convert normal letters to bold Unicode
-local function boldText(str)
-    local boldMap = {
-        a = '𝗮', b = '𝗯', c = '𝗰', d = '𝗱', e = '𝗲', f = '𝗳', g = '𝗴', h = '𝗵',
-        i = '𝗶', j = '𝗷', k = '𝗸', l = '𝗹', m = '𝗺', n = '𝗻', o = '𝗼', p = '𝗽',
-        q = '𝗾', r = '𝗿', s = '𝘀', t = '𝘁', u = '𝘂', v = '𝘃', w = '𝘄', x = '𝘅',
-        y = '𝘆', z = '𝘇',
-        A = '𝗔', B = '𝗕', C = '𝗖', D = '𝗗', E = '𝗘', F = '𝗙', G = '𝗚', H = '𝗛',
-        I = '𝗜', J = '𝗝', K = '𝗞', L = '𝗟', M = '𝗠', N = '𝗡', O = '𝗢', P = '𝗣',
-        Q = '𝗤', R = '𝗥', S = '𝗦', T = '𝗧', U = '𝗨', V = '𝗩', W = '𝗪', X = '𝗫',
-        Y = '𝗬', Z = '𝗭'
-    }
-
-    local result = ""
-    for c in str:gmatch(".") do
-        if boldMap[c] then
-            result = result .. boldMap[c]
-        else
-            result = result .. c
-        end
-    end
-    return result
-end
-
--- fixed sendTradeChatMessage function
 local function sendTradeChatMessage(message)
     if not mockState.active or not mockState.trade then
         return false
     end
 
-    if TradeApp and TradeApp._render_message_in_trade_chat then
-        local username = boldText(CONFIG.PARTNER_NAME)  -- bold using Unicode
-        local cleanMessage = message:gsub("%*%*", "")
-        local formattedMessage = string.format("%s: %s", username, cleanMessage)
+if TradeApp and TradeApp._render_message_in_trade_chat then
+    local formattedMessage = string.format('%s: %s', CONFIG.PARTNER_NAME, message)
+
 
         TradeApp:_render_message_in_trade_chat(nil, formattedMessage, true)
         return true
@@ -1672,7 +1644,7 @@ local titleLabel = Instance.new('TextLabel')
 titleLabel.Size = UDim2.new(1, 0, 0, 18)
 titleLabel.Position = UDim2.new(0, 0, 0, 2)
 titleLabel.BackgroundTransparency = 1
-titleLabel.Text = ‘Made and Edited by @ii126’
+titleLabel.Text = 'leaked by gus and aura'
 titleLabel.Font = Enum.Font.FredokaOne
 titleLabel.TextSize = 10
 titleLabel.TextColor3 = Color3.fromRGB(240, 240, 255)
